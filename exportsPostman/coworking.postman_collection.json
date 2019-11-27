@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "981a4c23-9825-4101-a579-251e4b347763",
+		"name": "coworking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST USUARIO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"admin\",\r\n\t\"email\": \"admin@admin.com.br\",\r\n\t\"login\": \"admin\",\r\n\t\"senha\": \"123456\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/novo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST LOGIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Administrador\",\r\n\t\"email\": \"admin@admin.com.br\",\r\n\t\"login\": \"admin\",\r\n\t\"senha\": \"admin\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CLIENTE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Maria\",\r\n    \"cpf\": \"02738104073\",\r\n    \"dataNascimento\": \"2019-05-22\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/novo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TIPO CONTATO",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor\": \"Telefone\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tipocontato/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tipocontato",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST TIPO CONTATO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"valor\": \"Email\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tipocontato/novo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tipocontato",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CONTATO",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/contato/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contato",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CONTATO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTU2OTAwNjgzN30.J2oyTpVu7DsITBuWPqDS52sQgkAm2Bx_i8MAOUtiNSDGGF3xvPyrlzb5pV0mtwbxI4n8v4fztkp6WWrkLBiwbA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \t\"fk_id_tipo_contato\": {\r\n    \t\t\t\t\t\t\"id\": 1,\r\n\t\t\t\t\t\t\t\"valor\": \"Email\",\r\n    \t\t\t\t\t\t\"contatos\": []\r\n\t\t\t\t\t\t  },\r\n   \t\"valor\": \"teste@teste.com.br\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/contato/novo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"contato",
+						"novo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
